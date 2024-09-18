@@ -13,9 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Move hidden files to public directory
+      - name: Move .well-known to public directory
         run: |
-          mv .hidden public/hidden
+          mkdir -p public/.well-known
+          mv .well-known/* public/.well-known/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
