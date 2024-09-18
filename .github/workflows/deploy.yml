@@ -17,6 +17,7 @@ jobs:
         run: |
           mkdir -p public/.well-known
           mv .well-known/* public/.well-known/
+          ls -R public/.well-known
 
       - name: Disable Jekyll (add .nojekyll file)
         run: |
