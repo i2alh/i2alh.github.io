@@ -1,1 +1,17 @@
-name: Deploy GitHub Pageson:  push:    branches:      - mainjobs:  deploy:    runs-on: ubuntu-latest    steps:    - uses: actions/checkout@v2    - name: Deploy to GitHub Pages      uses: peaceiris/actions-gh-pages@v3      with:        github_token: ${{ secrets.GITHUB_TOKEN }}        publish_dir: .  #%20Publish%20the%20root%20directory,%20including%20.well-known
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ # Include the root directory to ensure .well-known is included
