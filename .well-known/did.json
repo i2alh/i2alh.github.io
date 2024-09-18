@@ -1,0 +1,27 @@
+{
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      "https://w3id.org/security/suites/jws-2020/v1"
+    ],
+    "id": "did:web:i2alh.github.io",
+    "verificationMethod": [
+      {
+        "id": "did:web:i2alh.github.io#owner",
+        "type": "JsonWebKey2020",
+        "controller": "did:web:i2alh.github.io",
+        "publicKeyJwk": {
+          "kty": "EC",
+          "crv": "secp256k1",
+          "x": "nEFo2IR8G7AJqH5y03IjssGJ2uxbWD82Oi5bQLyEFGw=",
+          "y": "OBOd6AJdGTR3s38QwjiUrrVCMU9RnEMBI/Balt6iwQ4="
+        }
+      }
+    ],
+    "authentication": [
+      "did:web:i2alh.github.io#owner"
+    ],
+    "assertionMethod": [
+      "did:web:i2alh.github.io#owner"
+    ]
+  }
+  
